@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Goal</string>
+    <string name="nothing_to_show">Nothing to Show</string>
+    <string name="search">Search</string>
+    <string name="funds">Funds</string>
+    <string name="enter_sip_amount">Enter SIP amount</string>
+    <string name="add_fund">ADD FUND</string>
+    <string name="add">+Add</string>
+    <string name="of_every_month"> of every month</string>
+    <string name="sip_dates">SIP Dates: </string>
+    <string name="min_sip_multiple">Min SIP Multiple: </string>
+    <string name="min_sip_amount">Min SIP Amount: </string>
+</resources>

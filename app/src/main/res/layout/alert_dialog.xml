@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:id="@+id/relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:src="@drawable/smiling"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="14dp"
+                android:id="@+id/image"/>
+
+            <TextView
+                android:id="@+id/heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image"
+                android:text="Fund has been added to your dashboard"
+                android:layout_marginTop="14dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="14dp"
+                android:textAlignment="center"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/medium_font"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+
+
+            <TextView
+                android:text="has been successfully added to your dashboard"
+                android:textColor="@color/primaryText"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/book_font"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/heading"
+                android:id="@+id/success_message" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:background="@color/colorBackground"
+                android:layout_height="1dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="14dp"
+                android:layout_below="@id/success_message">
+            </View>
+
+
+
+            <TextView
+                android:text="Got it"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/semibold_font"
+                android:textSize="16sp"
+
+                android:layout_marginBottom="14dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view"
+                android:id="@+id/ok" />
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

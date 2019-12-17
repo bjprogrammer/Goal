@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#9c73ff</color>
+    <color name="colorPrimaryDark">#5c72ff</color>
+    <color name="colorAccent">#ffc5e2</color>
+
+    <color name="colorYellow">#ffddc1</color>
+    <color name="colorBlue">#8594FF</color>
+
+    <color name="colorCardView">#FFFFFF</color>
+    <color name="colorBackground">#EEEEEE</color>
+    <color name="background">#f9fcff</color>
+
+    <color name="editextBackground">#f7f7f7</color>
+
+    <color name="hintColor">#c0c0c0</color>
+    <color name="textColor">#949494</color>
+    <color name="primaryText">#989898</color>
+</resources>

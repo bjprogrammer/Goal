@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="fund" type="com.goalwise.goal.model.ListResponse.Data"/>
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:id="@+id/relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/gradientView"
+                android:text="@{fund.name}"
+                tool:text="ICICI PRUDENTIAL VALUE DISCOVERY FUND - GROWTH"
+                android:layout_marginTop="14dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="14dp"
+                android:fontFamily="@font/book_font"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+
+
+            <TextView
+                android:text="@string/min_sip_amount"
+                android:textColor="@color/primaryText"
+                android:layout_width="wrap_content"
+                android:layout_toEndOf="@+id/gradientView"
+                android:fontFamily="@font/book_font"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name"
+                android:layout_alignStart="@id/tv_name"
+                android:id="@+id/tv_sip" />
+
+
+            <TextView
+                app:minimumAmount="@{fund.minimumAmount}"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/book_font"
+                android:textSize="14sp"
+                android:singleLine="true"
+                tool:text="₹ 5000"
+                android:textColor="@android:color/black"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name"
+                android:layout_toEndOf="@+id/tv_sip"
+                android:id="@+id/sip_amount" />
+
+
+
+            <TextView
+                android:text="@string/min_sip_multiple"
+                android:textColor="@color/primaryText"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/book_font"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name"
+                android:layout_toStartOf="@+id/sip_amount_multiple"
+                android:id="@+id/tv_multiple" />
+
+
+            <TextView
+                app:multiple="@{fund.multiple}"
+                android:textColor="@android:color/black"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/book_font"
+                android:textSize="14sp"
+                tool:text="₹ 5000"
+                android:singleLine="true"
+                android:layout_marginEnd="12dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/sip_amount_multiple" />
+
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:background="@color/colorBackground"
+                android:layout_height="1dp"
+                android:layout_marginTop="14dp"
+                android:layout_alignStart="@id/tv_name"
+                android:layout_alignEnd="@id/tv_name"
+                android:layout_marginBottom="14dp"
+                android:layout_below="@id/tv_sip">
+            </View>
+
+
+            <TextView
+                android:text="@string/sip_dates"
+                android:textColor="@color/primaryText"
+                android:layout_width="wrap_content"
+                android:layout_toEndOf="@+id/gradientView"
+                android:fontFamily="@font/book_font"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view"
+                android:layout_alignStart="@id/tv_name"
+                android:id="@+id/tv_sip_dates" />
+
+
+            <TextView
+                tool:text="5, 10, 12, 15"
+                app:text ="@{fund.dates}"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/book_font"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view"
+                android:layout_toEndOf="@id/tv_sip_dates"
+                android:id="@+id/sip_dates" />
+
+
+
+            <TextView
+                android:text = "@string/of_every_month"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/book_font"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:textColor="@color/primaryText"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view"
+                android:layout_toEndOf="@id/sip_dates" />
+
+            <TextView
+                android:text="@string/add"
+                android:layout_width="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/semibold_font"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginEnd="12dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view"
+                android:id="@+id/add" />
+
+
+            <TextView
+                android:text="@string/add_fund"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/semibold_font"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:layout_marginTop="18dp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/gradient"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_sip_dates"
+                android:layout_alignEnd="@id/tv_name"
+                android:id="@+id/add_fund" />
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/regular_font"
+                android:textSize="14sp"
+                android:textAlignment="viewStart"
+                android:layout_marginTop="18dp"
+                android:padding="10dp"
+                android:inputType="number"
+                android:ems="10"
+                android:visibility="gone"
+                android:layout_alignBottom="@id/add_fund"
+                android:textColor="@android:color/black"
+                android:background="@color/editextBackground"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_sip_dates"
+                android:hint="@string/enter_sip_amount"
+                android:textColorHint="@color/hintColor"
+                android:layout_toStartOf="@+id/add_fund"
+                android:layout_alignStart="@id/tv_name"
+                android:id="@+id/edit_fund"
+                android:importantForAutofill="no" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/view2"
+                android:layout_marginTop="14dp"
+                android:layout_below="@id/edit_fund"/>
+
+            <View
+                android:id="@+id/gradientView"
+                android:layout_width="7dp"
+                android:background="@drawable/gradient_cardview"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignBottom="@id/view2">
+            </View>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
